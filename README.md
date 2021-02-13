@@ -3,7 +3,7 @@
 ## Steps to run.
 
 
-  ### 1.Clone this Repository
+  ### 1. Clone this Repository
   
   
     `git clone https://github.com/nageshnkt2007/person-service.git`
@@ -29,9 +29,32 @@
     
   ### 7. person-service will be running on 8080 port
     Swagger documentation:   `http://localhost:8080/swagger-ui.html#/`
+    Below is the list of Operations in person-service
+    `person-resource :
+      POST /person/
+      createPerson
+
+      PUT /person/
+      updatePerson
+
+      GET /person/all
+      getAllPersons
+
+      DELETE /person/batch/
+      deletePersons
+
+      POST /person/batch/
+      createPersons
+
+      PUT /person/batch/
+      updatePersons
+
+      GET /person/{id}
+      getPerson`
     
     
   ### 8. To quickly setup API testing Please import below postman collection.
+     For checking how to install/import a postman collection please visit `https://developer.ft.com/portal/docs-start-install-postman-and-import-request-collection`
     `/postman/person-service.postman_collection.json`
   ### 9. Constraints/Assumptions
     - `/getall` API accepts an optional parameter `page` to support pagination of Person list, This Pagination count in each is configurable in application-dev.yml for dev profile for testing. Currently it is set as `5` for dev profile.
