@@ -1,0 +1,17 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /db
+      webAllowOthers: true
+  jpa:
+    properties:
+      hibernate:
+        order_inserts: true
+        generate_statistics: true
+        jdbc:
+          batch_size: 2
+  datasource:
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver

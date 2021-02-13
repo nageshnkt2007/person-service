@@ -1,0 +1,10 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /db
+      webAllowOthers: true
+  datasource:
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver

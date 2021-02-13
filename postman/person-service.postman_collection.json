@@ -1,0 +1,142 @@
+{
+	"variables": [],
+	"info": {
+		"name": "person-service",
+		"_postman_id": "96e3f452-e3b1-7ac9-d3bd-0f6af221f790",
+		"description": "This collection is to test API's of person-service.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"url": "http://localhost:8080/person/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"first_name\": \"John\",\r\n \"last_name\": \"Keynes\",\r\n \"age\": \"29\",\r\n \"favourite_colour\": \"red\"\r\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"url": "http://localhost:8080/person/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Keynes\",\n    \"age\": \"29\",\n    \"favourite_colour\": \"yellow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Multiple Persons",
+			"request": {
+				"url": "http://localhost:8080/person/batch/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [\r\n\t {\r\n\t \"first_name\": \"John\",\r\n\t \"last_name\": \"Keynes\",\r\n\t \"age\": \"29\",\r\n\t \"favourite_colour\": \"red\"\r\n\t },\r\n\t {\r\n\t \"first_name\": \"Sarah\",\r\n\t \"last_name\": \"Robinson\",\r\n\t \"age\": \"54\",\r\n\t \"favourite_colour\": \"blue\"\r\n\t },\r\n\t {\r\n\t \"first_name\": \"Sarah1\",\r\n\t \"last_name\": \"Robinson1\",\r\n\t \"age\": \"54\",\r\n\t \"favourite_colour\": \"blue\"\r\n\t },\r\n\t {\r\n\t \"first_name\": \"Sarah2\",\r\n\t \"last_name\": \"Robinson2\",\r\n\t \"age\": \"54\",\r\n\t \"favourite_colour\": \"blue\"\r\n\t },\r\n\t {\r\n\t \"first_name\": \"Sarah3\",\r\n\t \"last_name\": \"Robinson3\",\r\n\t \"age\": \"54\",\r\n\t \"favourite_colour\": \"blue\"\r\n\t },\r\n\t {\r\n\t \"first_name\": \"Sarah\",\r\n\t \"last_name\": \"Robinson2\",\r\n\t \"age\": \"54\",\r\n\t \"favourite_colour\": \"blue\"\r\n\t }\r\n ]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Multiple Persons",
+			"request": {
+				"url": "http://localhost:8080/person/batch/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"402881e57792776601779279b3960000\",\n        \"first_name\": \"John1\",\n        \"last_name\": \"Keynes1\",\n        \"age\": \"29\",\n        \"favourite_colour\": \"red\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00001\",\n        \"first_name\": \"Sarah\",\n        \"last_name\": \"Robinson\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00002\",\n        \"first_name\": \"Sarah1\",\n        \"last_name\": \"Robinson1\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00003\",\n        \"first_name\": \"Sarah2\",\n        \"last_name\": \"Robinson2\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c10004\",\n        \"first_name\": \"Sarah3\",\n        \"last_name\": \"Robinson3\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c10005\",\n        \"first_name\": \"Sarah\",\n        \"last_name\": \"Robinson2\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Multiple Persons",
+			"request": {
+				"url": "http://localhost:8080/person/batch/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"402881e57792776601779279b3960000\",\n        \"first_name\": \"John1\",\n        \"last_name\": \"Keynes1\",\n        \"age\": \"29\",\n        \"favourite_colour\": \"red\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00001\",\n        \"first_name\": \"Sarah\",\n        \"last_name\": \"Robinson\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00002\",\n        \"first_name\": \"Sarah1\",\n        \"last_name\": \"Robinson1\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c00003\",\n        \"first_name\": \"Sarah2\",\n        \"last_name\": \"Robinson2\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c10004\",\n        \"first_name\": \"Sarah3\",\n        \"last_name\": \"Robinson3\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    },\n    {\n        \"id\": \"402881e57792776601779279b3c10005\",\n        \"first_name\": \"Sarah\",\n        \"last_name\": \"Robinson2\",\n        \"age\": \"54\",\n        \"favourite_colour\": \"blue\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Persons",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/person/all?page=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

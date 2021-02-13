@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: "dev"
+    main:
+      banner-mode: "off"
+pagination:
+  size: 5
